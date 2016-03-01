@@ -1,0 +1,60 @@
+.relayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+}
+
+/**
+ * Sets a margin in between each item
+ */
+.relayout--gutter {
+  margin-left: - map-get($relayout-gutter, sm);
+
+  @include relayout-break(md) {
+    margin-left: - map-get($relayout-gutter, md);
+  }
+
+  @include relayout-break(lg) {
+    margin-left: - map-get($relayout-gutter, lg);
+  }
+
+  @include relayout-break(xl) {
+    margin-left: - map-get($relayout-gutter, xl);
+  }
+}
+
+/**
+ * Horizontal Alignment
+ */
+.relayout--left {
+  justify-content: flex-start;
+}
+
+.relayout--center {
+  justify-content: center;
+}
+
+.relayout--right {
+  justify-content: flex-end;
+}
+
+/**
+ * Vertical alignment
+ */
+.relayout--top {
+  align-items: flex-start;
+}
+
+.relayout--middle {
+  align-items: center;
+}
+
+.relayout--bottom {
+  align-items: flex-end;
+}
+
+.relayout--strech {
+  align-items: stretch;
+}

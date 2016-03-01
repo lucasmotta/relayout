@@ -1,0 +1,76 @@
+/**
+ * By default, the wrapper doesn't have any paddings or max-width
+ * You have to use one of the modifiers bellow (default is "sm")
+ */
+.relayout-wrapper {
+  align-self: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * Applies a max-width and padding from the small breakpoint and up
+ */
+.relayout-wrapper--from-sm {
+  padding: 0 var(--relayout-gutter-sm);
+
+  @media (--relayout-breakpoint-md) {
+    max-width: var(--relayout-wrapper-md);
+    padding: 0 var(--relayout-gutter-md);
+  }
+
+  @media (--relayout-breakpoint-lg) {
+    max-width: var(--relayout-wrapper-lg);
+    padding: 0 var(--relayout-gutter-lg);
+  }
+
+  @media (--relayout-breakpoint-xl) {
+    max-width: var(--relayout-wrapper-xl);
+    padding: 0 var(--relayout-gutter-xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the medium breakpoint and up
+ */
+.relayout-wrapper--from-md {
+  @media (--relayout-breakpoint-md) {
+    max-width: var(--relayout-wrapper-md);
+    padding: 0 var(--relayout-gutter-md);
+  }
+
+  @media (--relayout-breakpoint-lg) {
+    max-width: var(--relayout-wrapper-lg);
+    padding: 0 var(--relayout-gutter-lg);
+  }
+
+  @media (--relayout-breakpoint-xl) {
+    max-width: var(--relayout-wrapper-xl);
+    padding: 0 var(--relayout-gutter-xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the large breakpoint and up
+ */
+.relayout-wrapper--from-lg {
+  @media (--relayout-breakpoint-lg) {
+    max-width: var(--relayout-wrapper-lg);
+    padding: 0 var(--relayout-gutter-lg);
+  }
+
+  @media (--relayout-breakpoint-xl) {
+    max-width: var(--relayout-wrapper-xl);
+    padding: 0 var(--relayout-gutter-xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the extra-lg breakpoint and up
+ */
+.relayout-wrapper--from-xl {
+  @media (--relayout-breakpoint-xl) {
+    max-width: var(--relayout-wrapper-xl);
+    padding: 0 var(--relayout-gutter-xl);
+  }
+}

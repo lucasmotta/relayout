@@ -1,0 +1,89 @@
+{
+  "name": "relayout",
+  "version": "0.0.1",
+  "description": "A simple flex grid system based on columns for React",
+  "jsnext:main": "src/index.js",
+  "main": "lib/index.js",
+  "style": "lib/style.css",
+  "files": [
+    "lib",
+    "src",
+    "style"
+  ],
+  "keywords": [
+    "react",
+    "layout",
+    "grid",
+    "flex",
+    "cssnext",
+    "sass"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasmotta/relayout"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasmotta/relayout/issues"
+  },
+  "scripts": {
+    "start": "http-server demo/build",
+    "lint": "eslint src/** style/**",
+    "pretest": "npm run lint",
+    "test": "BABEL_ENV=test ava | tap-min",
+    "prebuild": "npm test",
+    "build": "npm run source:compile",
+    "prepublish": "npm run build",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags",
+    "source:js": "rollup -g react:React -c",
+    "source:css": "postcss --use postcss-import --use postcss-cssnext -o lib/style.css style/css/index.css",
+    "source:compile": "npm run source:js && npm run source:css",
+    "demo:js": "rollup -f iife -i demo/index.js -o demo/build/index.js -c",
+    "demo:css": "postcss -w --use postcss-import --use postcss-cssnext -o demo/build/index.css demo/index.css",
+    "demo:compile": "npm run demo:js && npm run demo:css && cp demo/index.html demo/build/index.html",
+    "demo": "npm run source:compile && npm run demo:compile && npm start"
+  },
+  "author": "Lucas Motta <mail@lucasmotta.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.12.0",
+    "babel-preset-es2015": "6.5.0",
+    "babel-preset-es2015-rollup": "1.1.1",
+    "babel-preset-react": "6.5.0",
+    "babel-register": "6.5.2",
+    "cssfmt": "2.1.4",
+    "cssnano": "3.5.2",
+    "enzyme": "2.0.0",
+    "eslint": "2.2.0",
+    "eslint-config-airbnb": "6.0.2",
+    "eslint-plugin-react": "4.1.0",
+    "http-server": "0.9.0",
+    "node-sass": "3.4.2",
+    "postcss": "5.0.17",
+    "postcss-cli": "2.5.1",
+    "postcss-cssnext": "2.4.0",
+    "postcss-import": "8.0.2",
+    "react-addons-test-utils": "0.14.7",
+    "react-dom": "0.14.7",
+    "rollup": "0.25.4",
+    "rollup-plugin-babel": "2.4.0",
+    "rollup-plugin-commonjs": "2.2.1",
+    "rollup-plugin-node-resolve": "1.4.0",
+    "rollup-plugin-replace": "1.1.0",
+    "tap-min": "1.1.0"
+  },
+  "peerDependencies": {
+    "react": ">= 0.14.0"
+  },
+  "ava": {
+    "tap": true,
+    "files": [
+      "src/**/*.spec.js",
+      "style/**/*.spec.js"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  }
+}

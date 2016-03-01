@@ -1,0 +1,76 @@
+/**
+ * By default, the wrapper doesn't have any paddings or max-width
+ * You have to use one of the modifiers bellow (default is "sm")
+ */
+.relayout-wrapper {
+  align-self: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/**
+ * Applies a max-width and padding from the small breakpoint and up
+ */
+.relayout-wrapper--from-sm {
+  padding: 0 map-get($relayout-gutter, sm);
+
+  @include relayout-break(md) {
+    max-width: map-get($relayout-wrapper, md);
+    padding: 0 map-get($relayout-gutter, md);
+  }
+
+  @include relayout-break(lg) {
+    max-width: map-get($relayout-wrapper, lg);
+    padding: 0 map-get($relayout-gutter, lg);
+  }
+
+  @include relayout-break(xl) {
+    max-width: map-get($relayout-wrapper, xl);
+    padding: 0 map-get($relayout-gutter, xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the medium breakpoint and up
+ */
+.relayout-wrapper--from-md {
+  @include relayout-break(md) {
+    max-width: map-get($relayout-wrapper, md);
+    padding: 0 map-get($relayout-gutter, md);
+  }
+
+  @include relayout-break(lg) {
+    max-width: map-get($relayout-wrapper, lg);
+    padding: 0 map-get($relayout-gutter, lg);
+  }
+
+  @include relayout-break(xl) {
+    max-width: map-get($relayout-wrapper, xl);
+    padding: 0 map-get($relayout-gutter, xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the large breakpoint and up
+ */
+.relayout-wrapper--from-lg {
+  @include relayout-break(lg) {
+    max-width: map-get($relayout-wrapper, lg);
+    padding: 0 map-get($relayout-gutter, lg);
+  }
+
+  @include relayout-break(xl) {
+    max-width: map-get($relayout-wrapper, xl);
+    padding: 0 map-get($relayout-gutter, xl);
+  }
+}
+
+/**
+ * Applies a max-width and padding from the extra-large breakpoint and up
+ */
+.relayout-wrapper--from-xl {
+  @include relayout-break(xl) {
+    max-width: map-get($relayout-wrapper, xl);
+    padding: 0 map-get($relayout-gutter, xl);
+  }
+}

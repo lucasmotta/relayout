@@ -1,0 +1,247 @@
+.relayout__item {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.relayout__item > * {
+  width: 100%;
+}
+
+/**
+ * Apply the gutter based on the parent's class
+ */
+.relayout--gutter > .relayout__item {
+  padding-left: map-get($relayout-gutter, sm);
+
+  @include relayout-break(md) {
+    padding-left: map-get($relayout-gutter, md);
+  }
+
+  @include relayout-break(lg) {
+    padding-left: map-get($relayout-gutter, lg);
+  }
+
+  @include relayout-break(xl) {
+    padding-left: map-get($relayout-gutter, xl);
+  }
+}
+
+/**
+ * Use relative position in case you have children with absolute positions
+ */
+.relayout__item--relative {
+  position: relative;
+}
+
+/**
+ * Small (default) and up
+ */
+.relayout__item--1 {
+  @include relayout-column(1);
+}
+
+.relayout__item--2 {
+  @include relayout-column(2);
+}
+
+.relayout__item--3 {
+  @include relayout-column(3);
+}
+
+.relayout__item--4 {
+  @include relayout-column(4);
+}
+
+.relayout__item--5 {
+  @include relayout-column(5);
+}
+
+.relayout__item--6 {
+  @include relayout-column(6);
+}
+
+.relayout__item--7 {
+  @include relayout-column(7);
+}
+
+.relayout__item--8 {
+  @include relayout-column(8);
+}
+
+.relayout__item--9 {
+  @include relayout-column(9);
+}
+
+.relayout__item--10 {
+  @include relayout-column(10);
+}
+
+.relayout__item--11 {
+  @include relayout-column(11);
+}
+
+.relayout__item--12 {
+  @include relayout-column(12);
+}
+
+/**
+ * Medium and up
+ */
+@include relayout-break(md) {
+  .relayout__item--1\@md {
+    @include relayout-column(1);
+  }
+
+  .relayout__item--2\@md {
+    @include relayout-column(2);
+  }
+
+  .relayout__item--3\@md {
+    @include relayout-column(3);
+  }
+
+  .relayout__item--4\@md {
+    @include relayout-column(4);
+  }
+
+  .relayout__item--5\@md {
+    @include relayout-column(5);
+  }
+
+  .relayout__item--6\@md {
+    @include relayout-column(6);
+  }
+
+  .relayout__item--7\@md {
+    @include relayout-column(7);
+  }
+
+  .relayout__item--8\@md {
+    @include relayout-column(8);
+  }
+
+  .relayout__item--9\@md {
+    @include relayout-column(9);
+  }
+
+  .relayout__item--10\@md {
+    @include relayout-column(10);
+  }
+
+  .relayout__item--11\@md {
+    @include relayout-column(11);
+  }
+
+  .relayout__item--12\@md {
+    @include relayout-column(12);
+  }
+}
+
+/**
+ * Large and up
+ */
+@include relayout-break(lg) {
+  .relayout__item--1\@lg {
+    @include relayout-column(1);
+  }
+
+  .relayout__item--2\@lg {
+    @include relayout-column(2);
+  }
+
+  .relayout__item--3\@lg {
+    @include relayout-column(3);
+  }
+
+  .relayout__item--4\@lg {
+    @include relayout-column(4);
+  }
+
+  .relayout__item--5\@lg {
+    @include relayout-column(5);
+  }
+
+  .relayout__item--6\@lg {
+    @include relayout-column(6);
+  }
+
+  .relayout__item--7\@lg {
+    @include relayout-column(7);
+  }
+
+  .relayout__item--8\@lg {
+    @include relayout-column(8);
+  }
+
+  .relayout__item--9\@lg {
+    @include relayout-column(9);
+  }
+
+  .relayout__item--10\@lg {
+    @include relayout-column(10);
+  }
+
+  .relayout__item--11\@lg {
+    @include relayout-column(11);
+  }
+
+  .relayout__item--12\@lg {
+    @include relayout-column(12);
+  }
+}
+
+
+/**
+ * Extra-large and up
+ */
+@include relayout-break(xl) {
+  .relayout__item--1\@xl {
+    @include relayout-column(1);
+  }
+
+  .relayout__item--2\@xl {
+    @include relayout-column(2);
+  }
+
+  .relayout__item--3\@xl {
+    @include relayout-column(3);
+  }
+
+  .relayout__item--4\@xl {
+    @include relayout-column(4);
+  }
+
+  .relayout__item--5\@xl {
+    @include relayout-column(5);
+  }
+
+  .relayout__item--6\@xl {
+    @include relayout-column(6);
+  }
+
+  .relayout__item--7\@xl {
+    @include relayout-column(7);
+  }
+
+  .relayout__item--8\@xl {
+    @include relayout-column(8);
+  }
+
+  .relayout__item--9\@xl {
+    @include relayout-column(9);
+  }
+
+  .relayout__item--10\@xl {
+    @include relayout-column(10);
+  }
+
+  .relayout__item--11\@xl {
+    @include relayout-column(11);
+  }
+
+  .relayout__item--12\@xl {
+    @include relayout-column(12);
+  }
+}

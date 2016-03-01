@@ -1,0 +1,24 @@
+/**
+ * The breakpoint mixin
+ */
+@mixin relayout-break($breakpoint) {
+  $width: map-get($relayout-breakpoints, $breakpoint);
+  $width-unitless: $width / ($width * 0 + 1);
+  @if ($width-unitless == 0) {
+    @content;
+  } @else {
+    @media (min-width: #{$width}) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Mixin to set the width of each column
+ * Besides setting the `flex-basis`, we also set the `max-width` because of IE
+ */
+@mixin relayout-column($column) {
+  $size: ($column / $relayout-columns) * 100%;
+  flex-basis: $size;
+  max-width: $size;
+}
