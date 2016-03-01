@@ -1,6 +1,6 @@
 {
   "name": "relayout",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple flex grid system based on columns for React",
   "jsnext:main": "src/index.js",
   "main": "lib/index.js",
