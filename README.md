@@ -13,9 +13,9 @@ npm install relayout --save
 ## Usage
 
 Relayout consists of three Components:
-- [Relayout](docs/components/#relayout)
-- [RelayoutItem](docs/components/#relayoutitem)
-- [RelayoutWrapper](docs/components/#relayoutwrapper)
+- [Relayout](docs/components.md#relayout)
+- [RelayoutItem](docs/components.md#relayoutitem)
+- [RelayoutWrapper](docs/components.md#relayoutwrapper)
 
 ### JavaScript
 ```jsx
