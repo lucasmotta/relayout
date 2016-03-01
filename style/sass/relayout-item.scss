@@ -38,6 +38,10 @@
 /**
  * Small (default) and up
  */
+.relayout__item--0 {
+  display: none;
+}
+
 .relayout__item--1 {
   @include relayout-column(1);
 }
@@ -90,6 +94,10 @@
  * Medium and up
  */
 @include relayout-break(md) {
+  .relayout__item--0\@md {
+    display: none;
+  }
+
   .relayout__item--1\@md {
     @include relayout-column(1);
   }
@@ -137,12 +145,20 @@
   .relayout__item--12\@md {
     @include relayout-column(12);
   }
+
+  .relayout__item--reset\@md {
+    display: flex;
+  }
 }
 
 /**
  * Large and up
  */
 @include relayout-break(lg) {
+  .relayout__item--0\@lg {
+    display: none;
+  }
+
   .relayout__item--1\@lg {
     @include relayout-column(1);
   }
@@ -190,6 +206,10 @@
   .relayout__item--12\@lg {
     @include relayout-column(12);
   }
+
+  .relayout__item--reset\@lg {
+    display: flex;
+  }
 }
 
 
@@ -197,6 +217,10 @@
  * Extra-large and up
  */
 @include relayout-break(xl) {
+  .relayout__item--0\@xl {
+    display: none;
+  }
+
   .relayout__item--1\@xl {
     @include relayout-column(1);
   }
@@ -243,5 +267,9 @@
 
   .relayout__item--12\@xl {
     @include relayout-column(12);
+  }
+
+  .relayout__item--reset\@xl {
+    display: flex;
   }
 }

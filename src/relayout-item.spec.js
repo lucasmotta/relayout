@@ -64,6 +64,19 @@ test('Has columns on all breakpoints', t => {
   t.true(item.hasClass('relayout__item--11@xl'));
 });
 
+test('Has a reset class on medium and extra-large', t => {
+  const item = renderItem({ sm: 0, md: 4, lg: 0, xl: 11 });
+  t.true(item.hasClass('relayout__item--reset@md'));
+  t.true(item.hasClass('relayout__item--reset@xl'));
+});
+
+test('Has a reset class on large', t => {
+  const item1 = renderItem({ sm: 0, lg: 5 });
+  const item2 = renderItem({ md: 0, lg: 5 });
+  t.true(item1.hasClass('relayout__item--reset@lg'));
+  t.true(item2.hasClass('relayout__item--reset@lg'));
+});
+
 test('Has children', t => {
   const paragraph = createElement('p', null, 'Hello World');
   const item = renderItem(null, paragraph);

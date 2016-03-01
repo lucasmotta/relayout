@@ -34,9 +34,11 @@ You can set a custom number of columns for any breakpoint you need.
 You have a total number of 12 columns (where `12 == 100%` and `1 == 8.33%`).
 Since we don't have a concept of row, you can add as many `<RelayoutItem>`'s as you want.
 
+You can also use `0` if you want to hide the column completely - this will set the element to have a `display: none;`.
+
 ### Props
 
-The value for all the props bellow is a number ranging between `1` and `12`.
+The value for all the props bellow is a number ranging between `0` and `12`.
 
 - `sm`: Small and up (every screen size)
 - `md`: Medium and up
@@ -58,6 +60,17 @@ The value for all the props bellow is a number ranging between `1` and `12`.
   <p>hidden on medium screens only</p>
   <p>8 columns on large</p>
   <p>12 columns on extra-large</p>
+</RelayoutItem>
+
+<RelayoutItem sm="0" lg="8" xl="12">
+  <p>hidden on mobile and medium screen</p>
+  <p>8 columns on large</p>
+  <p>12 columns on extra-large</p>
+</RelayoutItem>
+
+<RelayoutItem sm="0" xl="5">
+  <p>hidden on mobile, medium screen and large screen</p>
+  <p>5 columns on extra-large</p>
 </RelayoutItem>
 ```
 

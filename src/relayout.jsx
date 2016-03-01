@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './utils/classes';
+import classes from './utils/get-classes';
 import layoutItemType from './utils/props/relayout-item-type';
 
 

@@ -6,7 +6,7 @@ test('Size PropType is a function', t => {
 });
 
 test('Size PropType accepts values from 1 and 12', t => {
-  const props = { small: 1, medium: 4, large: 8, extraLarge: 12 };
+  const props = { small: 0, medium: 4, large: 8, extraLarge: 12 };
 
   t.is(sizeType(props, 'small'), null);
   t.is(sizeType(props, 'medium'), null);

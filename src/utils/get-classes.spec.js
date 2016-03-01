@@ -1,5 +1,5 @@
 import test from 'ava';
-import classes from './classes';
+import classes from './get-classes';
 
 const props = {
   unicorn: true,

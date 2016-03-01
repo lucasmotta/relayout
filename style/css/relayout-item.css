@@ -38,6 +38,10 @@
 /**
  * Small (default) and up
  */
+.relayout__item--0 {
+  display: none;
+}
+
 .relayout__item--1 {
   flex-basis: calc(1 / var(--relayout-columns) * 100%);
   max-width: calc(1 / var(--relayout-columns) * 100%);
@@ -102,6 +106,10 @@
  * Medium and up
  */
 @media (--relayout-breakpoint-md) {
+  .relayout__item--0\@md {
+    display: none;
+  }
+
   .relayout__item--1\@md {
     flex-basis: calc(1 / var(--relayout-columns) * 100%);
     max-width: calc(1 / var(--relayout-columns) * 100%);
@@ -161,12 +169,20 @@
     flex-basis: calc(12 / var(--relayout-columns) * 100%);
     max-width: calc(12 / var(--relayout-columns) * 100%);
   }
+
+  .relayout__item--reset\@md {
+    display: flex;
+  }
 }
 
 /**
  * Large and up
  */
 @media (--relayout-breakpoint-lg) {
+  .relayout__item--0\@lg {
+    display: none;
+  }
+
   .relayout__item--1\@lg {
     flex-basis: calc(1 / var(--relayout-columns) * 100%);
     max-width: calc(1 / var(--relayout-columns) * 100%);
@@ -226,6 +242,10 @@
     flex-basis: calc(12 / var(--relayout-columns) * 100%);
     max-width: calc(12 / var(--relayout-columns) * 100%);
   }
+
+  .relayout__item--reset\@lg {
+    display: flex;
+  }
 }
 
 
@@ -233,6 +253,10 @@
  * Extra-lg and up
  */
 @media (--relayout-breakpoint-xl) {
+  .relayout__item--0\@xl {
+    display: none;
+  }
+
   .relayout__item--1\@xl {
     flex-basis: calc(1 / var(--relayout-columns) * 100%);
     max-width: calc(1 / var(--relayout-columns) * 100%);
@@ -291,5 +315,9 @@
   .relayout__item--12\@xl {
     flex-basis: calc(12 / var(--relayout-columns) * 100%);
     max-width: calc(12 / var(--relayout-columns) * 100%);
+  }
+
+  .relayout__item--reset\@xl {
+    display: flex;
   }
 }
