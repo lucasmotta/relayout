@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lucasmotta/relayout.svg?branch=master)](https://travis-ci.org/lucasmotta/relayout)
+
 # Relayout
 > A simple flex grid system based on columns for [React](https://facebook.github.io/react)
 
