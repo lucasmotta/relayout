@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-.relayout__item > * {
-  width: 100%;
-}
-
 /**
  * Apply the gutter based on the parent's class
  */
