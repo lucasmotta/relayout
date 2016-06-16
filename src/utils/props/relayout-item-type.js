@@ -6,7 +6,7 @@ export default function relayoutItemType(props, propName, componentName) {
   let error = null;
 
   React.Children.forEach(prop, (child) => {
-    if (child.type.name !== childrenName) {
+    if (child && child.type.name !== childrenName) {
       error = new Error(`${componentName} only accepts children of type "${childrenName}".`);
     }
   });
