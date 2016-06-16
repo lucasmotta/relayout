@@ -75,7 +75,7 @@
     "tap-min": "1.1.0"
   },
   "peerDependencies": {
-    "react": "^0.14.x"
+    "react": "^0.14.0 || ^15.0.0"
   },
   "ava": {
     "tap": true,
